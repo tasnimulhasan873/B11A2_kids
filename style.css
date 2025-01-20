@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+.quicksand_font {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* shared style */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: rgb(17, 17, 17);
+  --secondary-color: #fea301;
+  --tertiary-color: rgb(255, 255, 255);
+}
+.display_flex {
+  display: flex;
+}
+
+.btn_size_weight {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* navbar style */
+
+header {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 0px;
+
+}
+.bag_logo {
+  gap: 12px;
+  align-items: center;
+}
+.bag_img {
+  width: 62px;
+  height: 62px;
+}
+.school_txt {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_content li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+.nav_content {
+  gap: 32px;
+}
+.home {
+  color: var(--secondary-color);
+}
+.about {
+  color: rgb(1, 172, 253);
+}
+.facilities {
+  color: #05d4df;
+}
+.admission {
+  color: #5d58ef;
+}
+.contact_btn{
+    width: 197px;
+    border:none;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    color: var(--tertiary-color);
+    font-weight: 600;
+
+}
