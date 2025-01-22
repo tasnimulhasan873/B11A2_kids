@@ -8,6 +8,11 @@
   font-style: normal;
   font-weight: 400;
 }
+.quote{
+  background-color: rgb(253, 253, 253);
+  color: var(--secondary-color);
+  font-size: 20px;
+}
 
 /* shared style */
 
@@ -19,6 +24,10 @@
   --primary-color: rgb(17, 17, 17);
   --secondary-color: #fea301;
   --tertiary-color: rgb(255, 255, 255);
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
 }
 .display_flex {
   display: flex;
@@ -44,9 +53,38 @@ header {
   margin: 0 auto;
   padding: 20px 0px;
 }
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height:100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.01);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.newhr{
+  margin-top: 5px;
+  border-top: 1px solid rgb(254, 163, 1);
+  display: none;
+ 
+}
 .bag_logo {
   gap: 12px;
   align-items: center;
+}
+.menu{
+  display: none;
+  width: 22.5px;
+  height: 15px;
+}
+
+li{
+  list-style: none;
 }
 .bag_img {
   width: 62px;
@@ -85,11 +123,15 @@ a {
   background-color: var(--secondary-color);
   font-weight: 600;
 }
+.common_btn:hover{
+  background-color:  rgb(1, 172, 253);
+}
 
 .readMore_anchor {
   font-size: 1rem;
   font-weight: 700;
 }
+
 /* Banner section styles */
 .banner_section {
   max-width: 1160px;
@@ -116,14 +158,21 @@ a {
   font-weight: 700;
   background-color: var(--primary-color);
 }
+.banner_btn:hover{
+  background-color:  rgb(1, 172, 253);
+ 
+  color:var(--tertiary-color);
+}
 
 .banner_tittle,
 .banner_description {
   margin-bottom: 24px;
 }
-
+.banner_img {
+  margin-bottom: -4px;
+}
 /* standard_curriculum_section style */
-.carriculum_section_container{
+.carriculum_section_container {
   max-width: 1440px;
   background-image: url(assets/bg.png);
   background-repeat: no-repeat;
@@ -134,7 +183,6 @@ a {
   max-width: 1160px;
   height: 879px;
   margin: 0 auto;
- 
 }
 .Standard_Curriculum {
   font-size: 2.8rem;
@@ -221,6 +269,7 @@ a {
   width: 286px;
   margin: 0 auto;
   margin-bottom: 38px;
+  color: rgb(128, 128, 128);
 }
 
 .kinder_btn {
@@ -270,22 +319,19 @@ a {
 }
 /* Our_Stories_Section styles */
 
-.our_stories_container{
-  max-width:  1439px;
-  background-image: url(assets/bg.png), linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);;
+.our_stories_container {
+  background-image: url(assets/bg.png),
+    linear-gradient(0deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
   background-repeat: repeat;
- 
 }
 .Our_Stories_Section {
   max-width: 1160px;
 
   margin: 0 auto;
-  
 }
 .our_stories_title {
   justify-content: center;
   margin-bottom: 80px;
- 
 }
 .Our_Stories_Section_tittle {
   font-size: 2.87rem;
@@ -332,15 +378,18 @@ a {
 .story_tittle,
 .story_description {
   margin-bottom: 51px;
-  
 }
-.story_img{
+.story_tittle{
+  color: rgb(0, 0, 0);
+}
+
+.story_img {
   margin-bottom: -18px;
 }
-.story_btn{
+.story_btn {
   margin-bottom: 36px;
 }
-.story_description{
+.story_description {
   color: rgb(102, 102, 102);
   width: 433px;
 }
@@ -385,7 +434,6 @@ a {
 .btn5 {
   background-color: rgb(149, 178, 38);
   color: var(--tertiary-color);
-  
 }
 .View_all_btn_container {
   justify-content: center;
@@ -393,19 +441,25 @@ a {
 }
 .View_all {
   background-color: var(--primary-color);
-margin-bottom: 60px;
+  margin-bottom: 60px;
   font-weight: 700;
+}
+
+.View_all:hover{
+  background-color:  rgb(1, 172, 253);
+ 
+  color:var(--tertiary-color);
 }
 
 /* footer styles */
 
 footer {
-  max-width: 1439px;
+  margin: auto;
+  width: 1440px;
   height: 519px;
   background-color: rgb(1, 172, 253);
 }
 .footer_container {
- 
   margin-left: 140px;
   margin-right: 280px;
   width: 1070.91px;
@@ -413,15 +467,19 @@ footer {
   gap: 40px;
 }
 .footer_part1-tittle {
-  font-size: 2.625rem;
+  font-size:42px;
   color: var(--tertiary-color);
   font-weight: 700;
   width: 206.11px;
   height: 80px;
+ line-height: 39.51px;
+letter-spacing: 0%;
 }
 .img_tittle {
   align-items: center;
   margin-bottom: 32px;
+  width: 82px;
+  height: 82px;
 }
 .footer_part1_description {
   width: 399.02px;
@@ -469,4 +527,272 @@ footer {
 .footer_icon_container {
   width: 213.91px;
   height: 40px;
+}
+
+@media screen and (max-width: 391px) {
+  .school_txt{
+    display: none;
+  }
+
+  .menu{
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .newhr{
+    color: rgb(254, 163, 1);
+     display: block;
+    
+   }
+  .banner_img{
+  
+    width: 336.58px;
+height: 413px;
+padding: 10px;
+  }
+ 
+  .contact_btn{
+    display: none;
+  }
+  .nav_content a {
+    display: none;
+  }
+  .banner_section {
+    flex-direction: column-reverse;
+  }
+
+  .banner_tittle {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .banner_content {
+    width: 357px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .banner_img {
+   width: 336px;
+   height: 413px;
+  }
+
+  .banner_section {
+    gap: 0px;
+  }
+  .banner_tittle,
+  .banner_description {
+    margin-bottom: 18px;
+  }
+
+
+  .Standard_Curriculum {
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 40px 0px 20px 0px;
+  }
+
+  .carriculum_section_container {
+    width: 390px;
+    min-height: 1112px;
+    background-image: url(assets/bg.png);
+    background-repeat: no-repeat;
+    background-size: 390px 1833px;
+  }
+
+
+  .card3_container {
+   margin-bottom: 20px;
+  }
+
+  .card_img {
+    margin-top: 0px;
+    height: 92px;
+    width: 92px;
+  }
+
+  .card1,
+.card2,
+.card3 {
+  width: 357px;
+height: 321.28px;
+  box-sizing: border-box;
+  padding: 36px 28px;
+  margin-left: 16px;
+}
+
+.card_img,
+.card_tittle,
+.card_description {
+  margin-bottom: 20px;
+}
+
+.card_description {
+  font-size: 10px;
+  font-weight: 500;
+  width: 193px;
+  height: 50px;
+}
+
+.first{
+  margin-left: 16px;
+}
+
+
+
+
+.card2_container,
+.card3_container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card1_container{
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.our_stories_title {
+  margin-bottom: 40px;
+}
+
+
+.story2,.story3,.story4,.story5 {
+  width: 173px;
+  height: 179px;
+}
+
+.story_btn,
+.story_tittle,
+.story_description {
+  margin-left: 22px;
+}
+
+.story_btn {
+  width: 103.91px;
+  height: 22.93px;
+  border-radius: 47px;
+  margin-top: 2px;
+  font-size: 9.13px;
+
+}
+.story_tittle{
+  font-size: 9.13px;
+  width: 117.92px;
+height: 28.54px;
+}
+
+.story_btn {
+  margin-bottom: 14px;
+}
+
+
+  .card_container {
+    flex-direction: column;
+    width: 390px;
+   
+  }
+  .arrowTag_container {
+  display: none;
+  }
+  .story_card_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "s2 s3"
+      "s4 s5";
+      margin-bottom: 20px;
+      grid-gap: 10px;
+      place-items: center;
+      
+  }
+  .bag_img {
+    width: 46px;
+    height: 46px;
+  }
+  .story1{
+display: none;
+  }
+.dashedHr{
+  display: none;
+}
+.hero_kids{
+  width: 100%;
+}
+
+  .View_all_btn_container {
+ 
+    margin: 0px;
+  }
+
+ .View_all {
+        margin-bottom: 40px;
+      }
+
+  .footer_container{
+    flex-direction: column;
+    gap: 0px;
+  }
+  footer {
+    margin: auto;
+    width: 390px;
+    height: 690px;
+    background-color: rgb(1, 172, 253);
+  }
+  .footer_container {
+    margin-left: 20px;
+    margin-right: 12px;
+    width: 390px;
+    height: 642px;
+    
+  }
+
+  .footer_part1_description {
+    width: 357px;
+    height: 80px;
+    margin-right: 12px;
+    margin-top: 33px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--tertiary-color);
+  }
+
+.img_tittle img{
+  width: 69px;
+  height: 69px;
+}
+.footer_part1-tittle {
+  font-size: 2.625rem;
+  color: var(--tertiary-color);
+  font-weight: 700;
+  width: 172px;
+  height: 67px;
+  letter-spacing: 0%;
+}
+.img_tittle {
+  align-items: center;
+  
+}
+
+.footer_part1 {
+  margin-top: 60px;
+  margin-bottom: 32px;
+}
+.footer_part2{
+  margin-top: 32px;
+  margin-bottom: 31px;
+}
+
+.footer_part3{
+  margin-top: 31px;
+  margin-bottom: 60px;
+}
+.footer_part2{
+  width: 129px;
+height: 188.02px;
+}
+
+
 }
